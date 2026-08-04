@@ -1,0 +1,121 @@
+{
+    "DOC0001": {
+        "source": "WHO",
+        "title": "Tuberculosis",
+        "url": "https://www.who.int/news-room/fact-sheets/detail/tuberculosis",
+        "tokens": [
+            "tuberculosi",
+            "infecti",
+            "diseas",
+            "caus",
+            "by",
+            "bacteria",
+            "that",
+            "mainli",
+            "affect",
+            "lung",
+            "it",
+            "spread",
+            "from",
+            "person",
+            "person",
+            "through",
+            "air"
+        ]
+    },
+    "DOC0002": {
+        "source": "NIH",
+        "title": "High Blood Pressure",
+        "url": "https://www.nhlbi.nih.gov/health/high-blood-pressure",
+        "tokens": [
+            "high",
+            "blood",
+            "pressur",
+            "common",
+            "condit",
+            "where",
+            "forc",
+            "blood",
+            "against",
+            "arteri",
+            "wall",
+            "too",
+            "high",
+            "it",
+            "can",
+            "increas",
+            "risk",
+            "heart",
+            "diseas",
+            "stroke"
+        ]
+    },
+    "DOC0003": {
+        "source": "PubMed",
+        "title": "Diabetes Mellitus",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/",
+        "tokens": [
+            "diabet",
+            "mellitu",
+            "chronic",
+            "metabol",
+            "disord",
+            "character",
+            "by",
+            "elev",
+            "blood",
+            "glucos",
+            "level",
+            "caus",
+            "by",
+            "problem",
+            "insulin",
+            "product",
+            "or",
+            "action"
+        ]
+    },
+    "DOC0004": {
+        "source": "CDC",
+        "title": "Influenza",
+        "url": "https://www.cdc.gov/flu/",
+        "tokens": [
+            "influenza",
+            "respiratori",
+            "ill",
+            "caus",
+            "by",
+            "influenza",
+            "virus",
+            "symptom",
+            "may",
+            "includ",
+            "fever",
+            "cough",
+            "sore",
+            "throat",
+            "fatigu"
+        ]
+    },
+    "DOC0005": {
+        "source": "NIH",
+        "title": "Heart Disease",
+        "url": "https://www.nhlbi.nih.gov/health/heart-disease",
+        "tokens": [
+            "heart",
+            "diseas",
+            "refer",
+            "sever",
+            "condit",
+            "affect",
+            "heart",
+            "coronari",
+            "arteri",
+            "diseas",
+            "one",
+            "most",
+            "common",
+            "form"
+        ]
+    }
+}

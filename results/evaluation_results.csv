@@ -1,0 +1,4 @@
+query,precision,recall,f1,MAP,nDCG
+blood pressure,1.0,1.0,1.0,1.0,1.0
+diabetes,1.0,1.0,1.0,1.0,1.0
+influenza,1.0,1.0,1.0,1.0,1.0

@@ -1,0 +1,207 @@
+{
+    "tuberculosi": {
+        "DOC0001": 1
+    },
+    "infecti": {
+        "DOC0001": 1
+    },
+    "diseas": {
+        "DOC0001": 1,
+        "DOC0002": 1,
+        "DOC0005": 2
+    },
+    "caus": {
+        "DOC0001": 1,
+        "DOC0003": 1,
+        "DOC0004": 1
+    },
+    "by": {
+        "DOC0001": 1,
+        "DOC0003": 2,
+        "DOC0004": 1
+    },
+    "bacteria": {
+        "DOC0001": 1
+    },
+    "that": {
+        "DOC0001": 1
+    },
+    "mainli": {
+        "DOC0001": 1
+    },
+    "affect": {
+        "DOC0001": 1,
+        "DOC0005": 1
+    },
+    "lung": {
+        "DOC0001": 1
+    },
+    "it": {
+        "DOC0001": 1,
+        "DOC0002": 1
+    },
+    "spread": {
+        "DOC0001": 1
+    },
+    "from": {
+        "DOC0001": 1
+    },
+    "person": {
+        "DOC0001": 2
+    },
+    "through": {
+        "DOC0001": 1
+    },
+    "air": {
+        "DOC0001": 1
+    },
+    "high": {
+        "DOC0002": 2
+    },
+    "blood": {
+        "DOC0002": 2,
+        "DOC0003": 1
+    },
+    "pressur": {
+        "DOC0002": 1
+    },
+    "common": {
+        "DOC0002": 1,
+        "DOC0005": 1
+    },
+    "condit": {
+        "DOC0002": 1,
+        "DOC0005": 1
+    },
+    "where": {
+        "DOC0002": 1
+    },
+    "forc": {
+        "DOC0002": 1
+    },
+    "against": {
+        "DOC0002": 1
+    },
+    "arteri": {
+        "DOC0002": 1,
+        "DOC0005": 1
+    },
+    "wall": {
+        "DOC0002": 1
+    },
+    "too": {
+        "DOC0002": 1
+    },
+    "can": {
+        "DOC0002": 1
+    },
+    "increas": {
+        "DOC0002": 1
+    },
+    "risk": {
+        "DOC0002": 1
+    },
+    "heart": {
+        "DOC0002": 1,
+        "DOC0005": 2
+    },
+    "stroke": {
+        "DOC0002": 1
+    },
+    "diabet": {
+        "DOC0003": 1
+    },
+    "mellitu": {
+        "DOC0003": 1
+    },
+    "chronic": {
+        "DOC0003": 1
+    },
+    "metabol": {
+        "DOC0003": 1
+    },
+    "disord": {
+        "DOC0003": 1
+    },
+    "character": {
+        "DOC0003": 1
+    },
+    "elev": {
+        "DOC0003": 1
+    },
+    "glucos": {
+        "DOC0003": 1
+    },
+    "level": {
+        "DOC0003": 1
+    },
+    "problem": {
+        "DOC0003": 1
+    },
+    "insulin": {
+        "DOC0003": 1
+    },
+    "product": {
+        "DOC0003": 1
+    },
+    "or": {
+        "DOC0003": 1
+    },
+    "action": {
+        "DOC0003": 1
+    },
+    "influenza": {
+        "DOC0004": 2
+    },
+    "respiratori": {
+        "DOC0004": 1
+    },
+    "ill": {
+        "DOC0004": 1
+    },
+    "virus": {
+        "DOC0004": 1
+    },
+    "symptom": {
+        "DOC0004": 1
+    },
+    "may": {
+        "DOC0004": 1
+    },
+    "includ": {
+        "DOC0004": 1
+    },
+    "fever": {
+        "DOC0004": 1
+    },
+    "cough": {
+        "DOC0004": 1
+    },
+    "sore": {
+        "DOC0004": 1
+    },
+    "throat": {
+        "DOC0004": 1
+    },
+    "fatigu": {
+        "DOC0004": 1
+    },
+    "refer": {
+        "DOC0005": 1
+    },
+    "sever": {
+        "DOC0005": 1
+    },
+    "coronari": {
+        "DOC0005": 1
+    },
+    "one": {
+        "DOC0005": 1
+    },
+    "most": {
+        "DOC0005": 1
+    },
+    "form": {
+        "DOC0005": 1
+    }
+}

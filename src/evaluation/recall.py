@@ -1,18 +1,20 @@
 """
-precision.py
+recall.py
 
-Calculates precision metric.
+Calculates recall metric.
 """
 
 
-def precision(
+def recall(
     retrieved_documents,
     relevant_documents
 ):
 
-    if len(retrieved_documents) == 0:
+
+    if len(relevant_documents) == 0:
 
         return 0.0
+
 
 
     retrieved_set = set(
@@ -35,5 +37,5 @@ def precision(
     return (
         len(relevant_retrieved)
         /
-        len(retrieved_set)
+        len(relevant_set)
     )

@@ -241,30 +241,46 @@ The system:
 
 # Ranking Algorithm
 
-MedSearch IR implements two classical ranking approaches:
+MedSearch IR implements two classical Information Retrieval ranking approaches:
 
 ## TF-IDF
 
-TF-IDF ranks documents based on the importance of query terms.
+TF-IDF is used as a baseline ranking method.
 
-It considers:
+The score is calculated using:
 
-- Term frequency
-- Inverse document frequency
+- Term Frequency (TF)
+- Inverse Document Frequency (IDF)
+
+TF-IDF gives higher importance to terms that frequently appear in a document but are uncommon across the entire collection.
 
 ---
 
 ## BM25
 
-BM25 is the primary ranking algorithm used by the search engine.
+BM25 is the primary ranking algorithm used by MedSearch IR.
 
-BM25 improves ranking by considering:
+Unlike simple TF-IDF scoring, BM25 improves retrieval effectiveness by considering:
 
 - Term frequency saturation
 - Document length normalization
-- Term importance
+- Inverse document frequency weighting
 
-The ranking process produces ordered search results based on relevance scores.
+The implementation uses standard BM25 parameters:
+
+```
+k1 = 1.5  
+b = 0.75
+```
+
+The final relevance score combines term importance and document characteristics.
+
+Additional filtering is applied using:
+
+- Minimum BM25 score threshold
+- Query term coverage threshold
+
+to reduce weak document matches.
 
 ---
 

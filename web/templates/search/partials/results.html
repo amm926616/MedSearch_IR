@@ -1,0 +1,119 @@
+<div class="results-wrapper">
+
+    <div class="results-header">
+
+        <h3>
+            Showing results for:
+            <strong>"{{ query }}"</strong>
+        </h3>
+
+        <div class="search-statistics">
+
+            <span>
+                📄
+                {{ result_count }}
+                results found
+            </span>
+
+            <span>
+                🗂
+                {{ total_documents }}
+                documents indexed
+            </span>
+
+            <span>
+                ⚡
+                {{ processing_time }} ms
+            </span>
+
+            <span>
+                🧠
+                {{ ranking_model }}
+            </span>
+
+        </div>
+
+    </div>
+
+
+    {% if results %}
+
+    <div class="results-list">
+
+        {% for result in results %}
+
+        <article class="result-card">
+
+            <div class="result-rank">
+                {{ result.rank }}
+            </div>
+
+
+            <div class="result-content">
+
+                <h2 class="result-title">
+
+                    <a href="{{ result.url }}" target="_blank">
+
+                        {{ result.title }}
+
+                    </a>
+
+                </h2>
+
+
+                <p class="result-snippet">
+
+                    {{ result.snippet }}
+
+                </p>
+
+
+                <div class="result-meta">
+
+                    <span class="meta-item">
+
+                        🏥 {{ result.source }}
+
+                    </span>
+
+
+                    <span class="meta-item">
+
+                        🧠 BM25: {{ result.score }}
+
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </article>
+
+
+        {% endfor %}
+
+    </div>
+
+
+    {% else %}
+
+
+    <div class="empty-state">
+
+        <div>
+            🔍
+        </div>
+
+        <p>
+            No medical documents matched your query.
+        </p>
+
+    </div>
+
+
+    {% endif %}
+
+
+</div>

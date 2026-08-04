@@ -1,0 +1,110 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MedSearch IR - Medical Search Engine</title>
+
+    <link rel="icon" type="image/svg+xml" href="{% static 'favicon.svg' %}">
+
+    <!-- Local HTMX -->
+    <script src="{% static 'js/htmx.min.js' %}"></script>
+
+    <!-- Font Awesome icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Fonts & Custom CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+<div class="container">
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <i class="fas fa-heartbeat pulse"></i>
+            <h1>MedSearch <span>IR</span></h1>
+        </div>
+        <p class="subtitle">Advanced Medical Information Retrieval System</p>
+    </header>
+
+    <!-- Search Bar -->
+    <div class="search-section">
+        <div class="search-container">
+            <div class="search-box">
+                <i class="fas fa-search search-icon"></i>
+                <input
+                    type="text"
+                    id="search-input"
+                    name="query"
+                    class="search-input"
+                    placeholder="Search medical topics, diseases, treatments..."
+                    hx-get="/search/"
+                    hx-trigger="keyup changed delay:500ms"
+                    hx-target="#results-container"
+                    hx-indicator="#loading-indicator"
+                    autocomplete="off"
+                    autofocus
+                >
+                <button
+                    class="search-button"
+                    hx-get="/search/"
+                    hx-include="#search-input"
+                    hx-target="#results-container"
+                    hx-indicator="#loading-indicator"
+                >
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Quick suggestion chips -->
+        <div class="quick-suggestions">
+            <span class="suggestion-label">Try:</span>
+            <button class="suggestion-chip" hx-get="/search/?query=diabetes" hx-target="#results-container">Diabetes</button>
+            <button class="suggestion-chip" hx-get="/search/?query=covid-19" hx-target="#results-container">COVID-19</button>
+            <button class="suggestion-chip" hx-get="/search/?query=hypertension" hx-target="#results-container">Hypertension</button>
+            <button class="suggestion-chip" hx-get="/search/?query=cancer" hx-target="#results-container">Cancer</button>
+        </div>
+    </div>
+
+    <!-- Loading Indicator -->
+    <div id="loading-indicator" class="htmx-indicator">
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+            <p>Searching medical database...</p>
+        </div>
+    </div>
+
+    <!-- Dynamic Results Container -->
+    <div id="results-container" class="results-container">
+        <div class="welcome-state">
+            <div class="welcome-icon">
+                <i class="fas fa-stethoscope"></i>
+            </div>
+            <h2>Welcome to MedSearch IR</h2>
+            <p>Enter a medical query above to search through our database.</p>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Fast</h3>
+                    <p>Instant HTMX updates</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-brain"></i>
+                    <h3>Smart</h3>
+                    <p>BM25 Ranking Engine</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Reliable</h3>
+                    <p>Indexed medical topics</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,260 +1,274 @@
-# 🩺 MedSearch IR
+# MedSearch IR
+## Medical Information Retrieval System
 
-> **A Modular Healthcare Information Retrieval System**
->
-> **University of the People – CS 3308 Information Retrieval**
->
-> Group Project: Designing and Evaluating a Real-World Information Retrieval System
+![Python](https://img.shields.io/badge/Python-3.14-blue)
+![Information Retrieval](https://img.shields.io/badge/Domain-Information%20Retrieval-green)
+![Status](https://img.shields.io/badge/Status-Prototype-orange)
 
 ---
 
-## Overview
+# Overview
 
-**MedSearch IR** is a modular healthcare document retrieval system that demonstrates the complete lifecycle of a classical Information Retrieval (IR) system—from document collection and preprocessing to indexing, ranking, and evaluation.
+MedSearch IR is a medical information retrieval system designed to search and rank healthcare-related documents using classical Information Retrieval techniques.
 
-The project is inspired by the architecture of modern search engines while remaining lightweight enough to be implemented within an academic setting. It emphasizes **modularity, reproducibility, and explainability**, making it suitable for studying core IR concepts and evaluating retrieval performance.
+The project demonstrates the complete search engine pipeline:
 
-The implementation focuses on traditional IR techniques such as:
+- Document collection
+- Text preprocessing
+- Inverted index construction
+- Query processing
+- Document ranking
+- Retrieval evaluation
+- Ranking algorithm comparison
 
-- Inverted Indexing
-- TF-IDF Ranking
-- BM25 Ranking
-- Precision & Recall
-- MAP (Mean Average Precision)
-- nDCG (Normalized Discounted Cumulative Gain)
+The system was developed as part of an Information Retrieval course project.
 
-Future extensions such as Dense Retrieval, Learning-to-Rank, and Retrieval-Augmented Generation (RAG) are discussed as potential improvements but are intentionally excluded from the implementation scope.
+---
+
+# Objectives
+
+The main objectives of MedSearch IR are:
+
+- Build a functional medical document search engine
+- Apply classical IR algorithms
+- Compare different ranking approaches
+- Evaluate retrieval performance using standard IR metrics
 
 ---
 
 # System Architecture
 
-MedSearch IR is divided into two major pipelines.
-
-## Offline Indexing Pipeline
-
-Responsible for preparing searchable data.
+The system follows a modular Information Retrieval pipeline:
 
 ```
-Medical Documents
-        │
-        ▼
+Medical Sources
+
+      |
+      v
+
 Document Collection
-        │
-        ▼
+
+      |
+      v
+
 Text Preprocessing
-        │
-        ▼
-Inverted Index Construction
-        │
-        ▼
-Index Storage
-(postings.json, metadata.json)
-```
 
----
+      |
+      v
 
-## Online Search Pipeline
+Inverted Index
 
-Responsible for answering user queries.
+      |
+      v
 
-```
-User Query
-      │
-      ▼
 Query Processing
-      │
-      ▼
-Retrieval & Ranking
-(TF-IDF / BM25)
-      │
-      ▼
-Ranked Documents
-      │
-      ▼
-Evaluation Framework
+
+      |
+      v
+
+Ranking
+
+      |
+      v
+
+Evaluation
+```
+
+Detailed architecture:
+
+```
+docs/diagrams/system_architecture.md
 ```
 
 ---
 
-# Project Components
+# Features
 
-## 1. Healthcare Document Collection
+## Document Collection
 
-Builds the searchable medical corpus from public healthcare resources.
+The system supports medical document sources including:
 
-Possible data sources include:
+- World Health Organization (WHO)
+- National Institutes of Health (NIH)
+- PubMed
+- Centers for Disease Control and Prevention (CDC)
 
-- PubMed Abstracts
-- NIH
-- WHO
-- Public medical datasets
+Documents are converted into a unified dataset format.
 
-**Output**
+---
+
+## Text Preprocessing
+
+The preprocessing pipeline performs:
+
+- Text cleaning
+- Tokenization
+- Normalization
+- Stop word handling
+- Stemming
+
+Input:
 
 ```
 raw_documents.json
 ```
 
----
-
-## 2. Text Preprocessing Pipeline
-
-Converts raw text into normalized searchable tokens.
-
-Pipeline:
-
-- Text cleaning
-- Lowercasing
-- Tokenization
-- Stopword removal
-- Stemming / Lemmatization
-
----
-
-## 3. Inverted Index Construction
-
-Creates the core search structure that maps:
+Output:
 
 ```
-Term
-    ↓
-Documents
-```
-
-Outputs:
-
-```
-postings.json
-metadata.json
+processed_documents.json
 ```
 
 ---
 
-## 4. Query Processing
+## Indexing
 
-Processes user queries using the same preprocessing pipeline applied during indexing to ensure consistent document matching.
+The system builds an inverted index containing:
 
----
+- Terms
+- Document references
+- Term frequencies
 
-## 5. Retrieval & Ranking Engine
-
-Implements two ranking models.
-
-### Baseline
-
-- TF-IDF
-
-### Advanced
-
-- BM25
-
-The ranking engine returns the Top-K most relevant healthcare documents for each query.
-
----
-
-## 6. Evaluation Framework
-
-Measures retrieval effectiveness using standard IR metrics.
-
-Implemented metrics include:
-
-- Precision@K
-- Recall@K
-- F1 Score
-- MAP
-- nDCG
-
-Evaluation uses benchmark queries and relevance judgments (qrels).
-
----
-
-## 7. Visualization & Reporting
-
-Generates tables and figures used in the final project report, including:
-
-- Ranking comparisons
-- Evaluation charts
-- Performance summaries
-- Architecture diagrams
-
----
-
-# Repository Structure
+Generated file:
 
 ```
-MedSearch_IR/
+dataset/processed/inverted_index.json
+```
 
-├── dataset/
+---
+
+## Ranking Algorithms
+
+Two ranking models are implemented:
+
+## TF-IDF
+
+Term Frequency-Inverse Document Frequency ranks documents based on the importance of query terms.
+
+## BM25
+
+BM25 improves ranking by considering:
+
+- Term frequency saturation
+- Document length normalization
+- Query relevance
+
+---
+
+# Evaluation
+
+The system evaluates retrieval performance using:
+
+| Metric | Purpose |
+|-|-|
+| Precision | Measures retrieved relevance |
+| Recall | Measures coverage of relevant documents |
+| F1-score | Balance between precision and recall |
+| MAP | Measures ranking effectiveness |
+| nDCG | Measures ranked result quality |
+
+Evaluation output:
+
+```
+results/evaluation_results.csv
+```
+
+---
+
+# A/B Testing
+
+The project includes an offline ranking comparison experiment.
+
+Compared systems:
+
+```
+System A:
+TF-IDF
+
+System B:
+BM25
+```
+
+Evaluation metric:
+
+```
+Mean Average Precision (MAP)
+```
+
+Results:
+
+```
+results/ab_test_results.csv
+```
+
+Example:
+
+| Query | TF-IDF MAP | BM25 MAP | Winner |
+|-|-|-|-|
+| blood pressure | 1.0 | 1.0 | Tie |
+| diabetes | 1.0 | 1.0 | Tie |
+
+The identical scores demonstrate that both ranking algorithms performed successfully on the current evaluation corpus.
+
+---
+
+# Project Structure
+
+```
+MedSearch_IR
+
+├── config
 │
-├── src/
-│   ├── collection/
-│   ├── preprocessing/
-│   ├── indexing/
-│   ├── ranking/
-│   └── evaluation/
+├── dataset
+│   ├── raw
+│   ├── processed
+│   └── qrels
 │
-├── docs/
+├── docs
+│   ├── diagrams
+│   └── report_notes
 │
-├── results/
+├── src
+│   ├── collection
+│   ├── preprocessing
+│   ├── indexing
+│   ├── query
+│   ├── ranking
+│   ├── evaluation
+│   └── utils
 │
-├── tests/
+├── tests
 │
-├── main.py
-├── requirements.txt
 └── README.md
 ```
 
 ---
 
-# Technology Stack
+# Installation
 
-| Category | Technology |
-|-----------|------------|
-| Language | Python 3 |
-| Data Processing | Pandas, NumPy |
-| NLP | NLTK |
-| Data Collection | Requests, BeautifulSoup |
-| Storage | JSON |
-| Ranking | TF-IDF, BM25 |
-| Visualization | Matplotlib |
-| Testing | Pytest (optional) |
-
----
-
-# Getting Started
-
-## Clone the Repository
+Clone the repository:
 
 ```bash
-git clone https://github.com/<username>/MedSearch_IR.git
+git clone <repository-url>
 
 cd MedSearch_IR
 ```
 
----
-
-## Create Virtual Environment
-
-Linux / macOS
+Create virtual environment:
 
 ```bash
 python -m venv .venv
+```
 
+Activate environment:
+
+Linux:
+
+```bash
 source .venv/bin/activate
 ```
 
-Windows
-
-```bash
-python -m venv .venv
-
-.venv\Scripts\activate
-```
-
----
-
-## Install Dependencies
+Install dependencies:
 
 ```bash
 pip install -r requirements.txt
@@ -262,84 +276,129 @@ pip install -r requirements.txt
 
 ---
 
-## Build the Index
+# Running the System
+
+## 1. Load Dataset
 
 ```bash
-python main.py index
+python -m src.collection.dataset_loader
 ```
 
 ---
 
-## Search the Corpus
+## 2. Preprocess Documents
 
 ```bash
-python main.py search
+python -m src.preprocessing.pipeline
 ```
 
 ---
 
-# Development Roadmap
+## 3. Build Index
 
-The project is implemented following the priority order defined in the project blueprint.
-
-| Phase | Status |
-|---------|--------|
-| Repository Setup | ✅ |
-| Healthcare Document Collection | ⏳ |
-| Text Preprocessing | ⏳ |
-| Inverted Index Construction | ⏳ |
-| Query Processing | ⏳ |
-| TF-IDF Ranking | ⏳ |
-| BM25 Ranking | ⏳ |
-| Evaluation Metrics | ⏳ |
-| Visualization | ⏳ |
-| Documentation | ⏳ |
-
----
-
-# Outputs
-
-The system generates several artifacts during execution.
-
-```
-raw_documents.json
-postings.json
-metadata.json
-
-evaluation_results.csv
-
-results/
-charts/
+```bash
+python -m src.indexing.index_builder
 ```
 
 ---
 
-# Future Work
+## 4. Search Documents
 
-Although not implemented in this project, the architecture is designed to support future research directions including:
+Example:
 
-- Dense Retrieval
-- Sentence Embeddings
-- BERT Retrieval
-- ColBERT
-- Learning-to-Rank
-- Conversational Search
-- Retrieval-Augmented Generation (RAG)
+```bash
+python -m tests.test_search
+```
 
 ---
 
-# Contributors
+## 5. Evaluate System
 
-This project is developed collaboratively as part of the **CS 3308 Information Retrieval Group Project** at the **University of the People**.
+```bash
+python -m src.evaluation.metrics
+```
+
+---
+
+## 6. Run A/B Testing
+
+```bash
+python -m src.evaluation.ab_testing
+```
+
+---
+
+# Technologies Used
+
+| Technology | Purpose |
+|-|-|
+| Python | Implementation language |
+| JSON | Data storage |
+| CSV | Dataset format |
+| NLTK | Text processing |
+| Git | Version control |
+
+---
+
+# Limitations
+
+The current prototype uses a small manually prepared medical document collection.
+
+Limitations include:
+
+- Limited document size
+- Limited query diversity
+- No user feedback data
+- No semantic search capability
+
+---
+
+# Future Improvements
+
+Potential improvements:
+
+## Larger Medical Corpus
+
+Integrate:
+
+- PubMed datasets
+- Europe PMC
+- Medical guideline databases
+
+## Semantic Search
+
+Add:
+
+- Word embeddings
+- Transformer models
+- Vector databases
+
+## Learning-to-Rank
+
+Implement machine learning ranking models using:
+
+- User interaction data
+- Click feedback
+- Relevance signals
+
+## Personalization
+
+Support:
+
+- User preferences
+- Medical specialties
+- Search history
+
+---
+
+# Authors
+
+MedSearch IR Project Team
+
+Information Retrieval Course
 
 ---
 
 # License
 
-This repository is intended for educational and academic purposes.
-
----
-
-## Acknowledgements
-
-This project draws inspiration from classical Information Retrieval systems and modern search engine architectures, incorporating concepts such as inverted indexing, probabilistic ranking, and retrieval evaluation commonly used in both academia and industry.
+Academic project for educational purposes.

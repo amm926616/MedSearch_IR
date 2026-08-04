@@ -1,5 +1,12 @@
-venv/
 __pycache__/
 *.pyc
 .idea/
 .ipynb_checkpoints/
+*.py[cod]
+.venv/
+
+# Django
+web/db.sqlite3
+web/**/__pycache__/
+web/*.pyc
+

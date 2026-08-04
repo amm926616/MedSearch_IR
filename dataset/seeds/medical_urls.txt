@@ -26,6 +26,12 @@ https://www.cdc.gov/kidney-disease/
 https://www.cdc.gov/tb/
 https://www.cdc.gov/malaria/
 https://www.cdc.gov/hiv/
+https://www.cdc.gov/flu/
+https://www.cdc.gov/covid/
+https://www.cdc.gov/hepatitis/
+https://www.cdc.gov/std/
+https://www.who.int/health-topics/influenza-seasonal
+https://www.who.int/health-topics/tuberculosis
 
 https://www.nhlbi.nih.gov/health/high-blood-pressure
 https://www.nhlbi.nih.gov/health/coronary-heart-disease
@@ -35,7 +41,24 @@ https://www.nhlbi.nih.gov/health/sleep-apnea
 https://www.nhlbi.nih.gov/health/anemia
 https://www.nhlbi.nih.gov/health/heart-attack
 https://www.nhlbi.nih.gov/health/arrhythmias
+https://www.nimh.nih.gov/health/topics/depression
+https://www.nimh.nih.gov/health/topics/anxiety-disorders
+https://www.nimh.nih.gov/health/topics/bipolar-disorder
+https://www.nimh.nih.gov/health/topics/schizophrenia
+https://www.nimh.nih.gov/health/topics/post-traumatic-stress-disorder-ptsd
+https://www.nimh.nih.gov/health/topics/attention-deficit-hyperactivity-disorder-adhd
+https://www.ninds.nih.gov/health-information/disorders/epilepsy
+https://www.ninds.nih.gov/health-information/disorders/parkinsons-disease
+https://www.ninds.nih.gov/health-information/disorders/multiple-sclerosis
+https://www.ninds.nih.gov/health-information/disorders/migraine
+https://www.ninds.nih.gov/health-information/disorders/stroke
 
+https://www.niddk.nih.gov/health-information/digestive-diseases/celiac-disease
+https://www.niddk.nih.gov/health-information/digestive-diseases/crohns-disease
+https://www.niddk.nih.gov/health-information/digestive-diseases/irritable-bowel-syndrome
+
+https://medlineplus.gov/gerd.html
+https://medlineplus.gov/hepatitis.html
 https://medlineplus.gov/diabetes.html
 https://medlineplus.gov/highbloodpressure.html
 https://medlineplus.gov/heartdiseases.html
@@ -51,6 +74,10 @@ https://medlineplus.gov/obesity.html
 https://medlineplus.gov/kidneydiseases.html
 https://medlineplus.gov/infectiousdiseases.html
 https://medlineplus.gov/tuberculosis.html
+https://medlineplus.gov/thyroiddiseases.html
+https://medlineplus.gov/hypothyroidism.html
+https://medlineplus.gov/hyperthyroidism.html
+https://medlineplus.gov/metabolicsyndrome.html
 
 
 

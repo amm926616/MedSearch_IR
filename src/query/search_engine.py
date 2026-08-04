@@ -12,36 +12,21 @@ Features:
 
 
 import json
-from pathlib import Path
 from datetime import datetime
-
+from pathlib import Path
 
 from src.query.query_processor import QueryProcessor
 from src.ranking.bm25_ranker import BM25Ranker
 
-
+# Find the project root (MedSearch_IR/ directory)
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 
 class SearchEngine:
 
-
-    INDEX_FILE = Path(
-        "dataset/processed/inverted_index.json"
-    )
-
-    METADATA_FILE = Path(
-        "dataset/processed/document_metadata.json"
-    )
-
-    DOCUMENTS_FILE = Path(
-        "dataset/processed/processed_documents.json"
-    )
-
-
-    HISTORY_FILE = Path(
-        "results/logs/search_history.json"
-    )
-
-
+    INDEX_FILE = PROJECT_ROOT / "dataset/processed/inverted_index.json"
+    METADATA_FILE = PROJECT_ROOT / "dataset/processed/document_metadata.json"
+    DOCUMENTS_FILE = PROJECT_ROOT / "dataset/processed/processed_documents.json"
+    HISTORY_FILE = PROJECT_ROOT / "results/logs/search_history.json"
 
     def __init__(self):
 

@@ -143,9 +143,6 @@ class MedicalCrawler:
             f"Crawling: {url}"
         )
 
-        time.sleep(1)
-
-
         if not self.allowed_by_robots(url):
 
             print(

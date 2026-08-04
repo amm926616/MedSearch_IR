@@ -11,9 +11,16 @@ into:
 dataset/processed/raw_documents.json
 """
 
+import sys
+from pathlib import Path
+
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+
+sys.path.append(
+    str(PROJECT_ROOT)
+)
 
 from src.collection.dataset_loader import DatasetLoader
-
 
 
 def main():

@@ -263,5 +263,499 @@
             "DOC0035",
             "DOC0018"
         ]
+    },
+    {
+        "query": "heart disease",
+        "timestamp": "2026-08-04 20:35:14",
+        "results": [
+            "DOC0013",
+            "DOC0009",
+            "DOC0006",
+            "DOC0002",
+            "DOC0038"
+        ]
+    },
+    {
+        "query": "kidney",
+        "timestamp": "2026-08-04 20:35:24",
+        "results": [
+            "DOC0023",
+            "DOC0031",
+            "DOC0011",
+            "DOC0022",
+            "DOC0001"
+        ]
+    },
+    {
+        "query": "diabetes",
+        "timestamp": "2026-08-04 16:42:30",
+        "results": [
+            "DOC0011",
+            "DOC0001",
+            "DOC0005",
+            "DOC0023",
+            "DOC0031"
+        ]
+    },
+    {
+        "query": "diabetes",
+        "timestamp": "2026-08-04 16:42:30",
+        "results": [
+            "DOC0011",
+            "DOC0001",
+            "DOC0005",
+            "DOC0023",
+            "DOC0031"
+        ]
+    },
+    {
+        "query": "cancer rate",
+        "timestamp": "2026-08-04 16:42:45",
+        "results": [
+            "DOC0003",
+            "DOC0041",
+            "DOC0047",
+            "DOC0014",
+            "DOC0039"
+        ]
+    },
+    {
+        "query": "cancer",
+        "timestamp": "2026-08-04 16:42:46",
+        "results": [
+            "DOC0014",
+            "DOC0003",
+            "DOC0007",
+            "DOC0043",
+            "DOC0048"
+        ]
+    },
+    {
+        "query": "cancer in the heart",
+        "timestamp": "2026-08-04 16:42:48",
+        "results": [
+            "DOC0022",
+            "DOC0048",
+            "DOC0014",
+            "DOC0003",
+            "DOC0007"
+        ]
+    },
+    {
+        "query": "cancer re",
+        "timestamp": "2026-08-04 16:43:04",
+        "results": [
+            "DOC0014",
+            "DOC0022",
+            "DOC0003",
+            "DOC0007",
+            "DOC0005"
+        ]
+    },
+    {
+        "query": "cancer",
+        "timestamp": "2026-08-04 16:43:05",
+        "results": [
+            "DOC0014",
+            "DOC0003",
+            "DOC0007",
+            "DOC0043",
+            "DOC0048"
+        ]
+    },
+    {
+        "query": "cancer rate for elder people",
+        "timestamp": "2026-08-04 16:43:10",
+        "results": [
+            "DOC0003",
+            "DOC0041",
+            "DOC0047",
+            "DOC0014",
+            "DOC0031"
+        ]
+    },
+    {
+        "query": "stard",
+        "timestamp": "2026-08-04 16:44:08",
+        "results": []
+    },
+    {
+        "query": "stardew",
+        "timestamp": "2026-08-04 16:44:09",
+        "results": []
+    },
+    {
+        "query": "junk",
+        "timestamp": "2026-08-04 16:44:14",
+        "results": []
+    },
+    {
+        "query": "food",
+        "timestamp": "2026-08-04 16:44:18",
+        "results": [
+            "DOC0047",
+            "DOC0041",
+            "DOC0024",
+            "DOC0005",
+            "DOC0008"
+        ]
+    },
+    {
+        "query": "diabetes",
+        "timestamp": "2026-08-04 16:44:20",
+        "results": [
+            "DOC0011",
+            "DOC0001",
+            "DOC0005",
+            "DOC0023",
+            "DOC0031"
+        ]
+    },
+    {
+        "query": "hypertension",
+        "timestamp": "2026-08-04 16:44:21",
+        "results": [
+            "DOC0012",
+            "DOC0008",
+            "DOC0002",
+            "DOC0048",
+            "DOC0022"
+        ]
+    },
+    {
+        "query": "covid-19",
+        "timestamp": "2026-08-04 16:44:23",
+        "results": [
+            "DOC0043",
+            "DOC0042",
+            "DOC0045"
+        ]
+    },
+    {
+        "query": "cancer",
+        "timestamp": "2026-08-04 16:44:23",
+        "results": [
+            "DOC0014",
+            "DOC0003",
+            "DOC0007",
+            "DOC0043",
+            "DOC0048"
+        ]
+    },
+    {
+        "query": "check",
+        "timestamp": "2026-08-04 16:55:07",
+        "results": [
+            "DOC0022",
+            "DOC0023",
+            "DOC0011",
+            "DOC0008",
+            "DOC0045"
+        ]
+    },
+    {
+        "query": "kidney",
+        "timestamp": "2026-08-04 16:55:12",
+        "results": [
+            "DOC0023",
+            "DOC0031",
+            "DOC0011",
+            "DOC0022",
+            "DOC0001"
+        ]
+    },
+    {
+        "query": "lypoma",
+        "timestamp": "2026-08-04 16:55:24",
+        "results": []
+    },
+    {
+        "query": "lipoma",
+        "timestamp": "2026-08-04 16:55:28",
+        "results": []
+    },
+    {
+        "query": "thumb",
+        "timestamp": "2026-08-04 16:55:32",
+        "results": [
+            "DOC0021"
+        ]
+    },
+    {
+        "query": "thumb",
+        "timestamp": "2026-08-04 16:56:14",
+        "results": [
+            "DOC0021"
+        ]
+    },
+    {
+        "query": "covid-19",
+        "timestamp": "2026-08-04 16:56:16",
+        "results": [
+            "DOC0043",
+            "DOC0042",
+            "DOC0045"
+        ]
+    },
+    {
+        "query": "hypertension",
+        "timestamp": "2026-08-04 16:56:16",
+        "results": [
+            "DOC0012",
+            "DOC0008",
+            "DOC0002",
+            "DOC0048",
+            "DOC0022"
+        ]
+    },
+    {
+        "query": "cancer",
+        "timestamp": "2026-08-04 16:56:17",
+        "results": [
+            "DOC0014",
+            "DOC0003",
+            "DOC0007",
+            "DOC0043",
+            "DOC0048"
+        ]
+    },
+    {
+        "query": "diabetes",
+        "timestamp": "2026-08-04 16:56:17",
+        "results": [
+            "DOC0011",
+            "DOC0001",
+            "DOC0005",
+            "DOC0023",
+            "DOC0031"
+        ]
+    },
+    {
+        "query": "what",
+        "timestamp": "2026-08-04 16:57:17",
+        "results": [
+            "DOC0057",
+            "DOC0048",
+            "DOC0060",
+            "DOC0034",
+            "DOC0040"
+        ]
+    },
+    {
+        "query": "renal",
+        "timestamp": "2026-08-04 16:57:26",
+        "results": [
+            "DOC0063"
+        ]
+    },
+    {
+        "query": "renal stone",
+        "timestamp": "2026-08-04 16:57:29",
+        "results": [
+            "DOC0063"
+        ]
+    },
+    {
+        "query": "test",
+        "timestamp": "2026-08-04 17:06:49",
+        "results": [
+            "DOC0066",
+            "DOC0067",
+            "DOC0023",
+            "DOC0068",
+            "DOC0025"
+        ]
+    },
+    {
+        "query": "covid-19",
+        "timestamp": "2026-08-04 17:07:01",
+        "results": [
+            "DOC0027",
+            "DOC0026",
+            "DOC0008",
+            "DOC0007",
+            "DOC0010"
+        ]
+    },
+    {
+        "query": "hypertension",
+        "timestamp": "2026-08-04 17:07:53",
+        "results": [
+            "DOC0052",
+            "DOC0032",
+            "DOC0002",
+            "DOC0013",
+            "DOC0062"
+        ]
+    },
+    {
+        "query": "test",
+        "timestamp": "2026-08-04 17:08:04",
+        "results": [
+            "DOC0066",
+            "DOC0067",
+            "DOC0023",
+            "DOC0068",
+            "DOC0025"
+        ]
+    },
+    {
+        "query": "diabetes",
+        "timestamp": "2026-08-04 17:08:22",
+        "results": [
+            "DOC0051",
+            "DOC0001",
+            "DOC0014",
+            "DOC0063",
+            "DOC0069"
+        ]
+    },
+    {
+        "query": "covid-19",
+        "timestamp": "2026-08-04 17:10:52",
+        "results": [
+            "DOC0027",
+            "DOC0026",
+            "DOC0008",
+            "DOC0007",
+            "DOC0010"
+        ]
+    },
+    {
+        "query": "covid-19",
+        "timestamp": "2026-08-04 17:10:55",
+        "results": [
+            "DOC0027",
+            "DOC0026",
+            "DOC0008",
+            "DOC0007",
+            "DOC0010"
+        ]
+    },
+    {
+        "query": "covid-19",
+        "timestamp": "2026-08-04 17:11:26",
+        "results": [
+            "DOC0027",
+            "DOC0026",
+            "DOC0008",
+            "DOC0007",
+            "DOC0010"
+        ]
+    },
+    {
+        "query": "cancer",
+        "timestamp": "2026-08-04 17:18:14",
+        "results": [
+            "DOC0054",
+            "DOC0003",
+            "DOC0016",
+            "DOC0008",
+            "DOC0013"
+        ]
+    },
+    {
+        "query": "hypertension",
+        "timestamp": "2026-08-04 17:18:33",
+        "results": [
+            "DOC0052",
+            "DOC0032",
+            "DOC0002",
+            "DOC0013",
+            "DOC0062"
+        ]
+    },
+    {
+        "query": "cancer",
+        "timestamp": "2026-08-04 17:18:36",
+        "results": [
+            "DOC0054",
+            "DOC0003",
+            "DOC0016",
+            "DOC0008",
+            "DOC0013"
+        ]
+    },
+    {
+        "query": "covid-19",
+        "timestamp": "2026-08-04 17:18:37",
+        "results": [
+            "DOC0027",
+            "DOC0026",
+            "DOC0008",
+            "DOC0007",
+            "DOC0010"
+        ]
+    },
+    {
+        "query": "diabetes",
+        "timestamp": "2026-08-04 17:18:39",
+        "results": [
+            "DOC0051",
+            "DOC0001",
+            "DOC0014",
+            "DOC0063",
+            "DOC0069"
+        ]
+    },
+    {
+        "query": "diabetes",
+        "timestamp": "2026-08-04 17:25:55",
+        "results": [
+            "DOC0051",
+            "DOC0001",
+            "DOC0014",
+            "DOC0063",
+            "DOC0069"
+        ]
+    },
+    {
+        "query": "diabetes",
+        "timestamp": "2026-08-04 17:26:00",
+        "results": [
+            "DOC0051",
+            "DOC0001",
+            "DOC0014",
+            "DOC0063",
+            "DOC0069"
+        ]
+    },
+    {
+        "query": "Dia",
+        "timestamp": "2026-08-04 17:26:08",
+        "results": []
+    },
+    {
+        "query": "Diabetes",
+        "timestamp": "2026-08-04 17:26:10",
+        "results": [
+            "DOC0051",
+            "DOC0001",
+            "DOC0014",
+            "DOC0063",
+            "DOC0069"
+        ]
+    },
+    {
+        "query": "covid-19",
+        "timestamp": "2026-08-04 17:26:43",
+        "results": [
+            "DOC0027",
+            "DOC0026",
+            "DOC0008",
+            "DOC0007",
+            "DOC0010"
+        ]
+    },
+    {
+        "query": "hypertension",
+        "timestamp": "2026-08-04 17:26:44",
+        "results": [
+            "DOC0052",
+            "DOC0032",
+            "DOC0002",
+            "DOC0013",
+            "DOC0062"
+        ]
     }
 ]

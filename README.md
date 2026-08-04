@@ -470,15 +470,22 @@ pip install -r requirements.txt
 
 # Running the System
 
-## Complete Pipeline
+MedSearch IR can be executed in two modes:
 
-Run each stage:
+1. Command-line Information Retrieval System
+2. Django Web Search Interface
+
+---
+
+## 1. Command-line IR System
+
+Run the complete pipeline:
 
 ### 1. Crawl medical documents
 
 ```bash
 python scripts/crawl.py
-```
+````
 
 ### 2. Load dataset
 
@@ -504,21 +511,167 @@ python scripts/build_index.py
 python scripts/evaluate.py
 ```
 
-### 6. Start search engine
+### 6. Start command-line search engine
 
 ```bash
 python main.py
 ```
 
+Example:
+
+```
+Medical Search > diabetes
+```
+
+The system returns ranked documents using BM25 scoring.
+
 ---
+
+# 2. Django Web Interface
+
+MedSearch IR also provides a web-based search interface built with:
+
+- Django
+    
+- HTMX
+    
+- HTML/CSS
+    
+- Local static assets
+    
+
+The web application provides:
+
+- Real-time search updates
+    
+- BM25 ranked results
+    
+- Search statistics
+    
+- Document sources
+    
+- Relevance scores
+    
+
+---
+
+## Web Application Setup
+
+Navigate to the web directory:
+
+```bash
+cd web
+```
+
+Apply Django database migrations:
+
+```bash
+python manage.py migrate
+```
+
+---
+
+## Start the Development Server
+
+Run:
+
+```bash
+python manage.py runserver
+```
+
+The server starts at:
+
+```
+http://127.0.0.1:8000/
+```
+
+Open the URL in a browser.
+
+---
+
+## Example Search
+
+Enter a medical query:
+
+```
+renal stone
+```
+
+Example output:
+
+```
+Showing results for "renal stone"
+
+1 result found
+48 documents indexed
+BM25 ranking
+Processing time: 20 ms
+
+
+1
+
+Kidney Diseases | Renal Disease | MedlinePlus
+
+Source:
+MedlinePlus
+
+BM25 Score:
+12.4300
+```
+
+---
+
+## Web Application Structure
+
+```
+web/
+
+├── manage.py
+│
+├── medsearch
+│   ├── settings.py
+│   └── urls.py
+│
+├── search
+│   ├── views.py
+│   └── urls.py
+│
+├── templates
+│   └── search
+│       ├── search.html
+│       └── partials
+│           └── results.html
+│
+└── static
+    ├── css
+    │   └── styles.css
+    │
+    ├── js
+    │   └── htmx.min.js
+    │
+    └── favicon.svg
+```
+
+---
+
+## Stopping the Server
+
+Press:
+
+```bash
+CTRL + C
+```
 
 # Technologies Used
 
 |Technology|Purpose|
-|---|---|
-|Python|System implementation|
-|NLTK|Text processing|
-|JSON|Intermediate storage|
+|-|-|
+|Python|Core IR implementation|
+|NLTK|Text preprocessing and tokenization|
+|Django|Web application framework|
+|HTMX|Dynamic search interface|
+|HTML/CSS|Frontend presentation|
+|JSON|Intermediate index storage|
 |CSV|Dataset storage|
 |Git|Version control|
 
@@ -588,6 +741,28 @@ Support:
     
 - Medical specialty filtering
     
+
+---
+
+# Web Interface Preview
+
+The Django frontend provides an interactive medical search experience.
+
+Features:
+
+- Medical query search
+- BM25 ranking
+- Document snippets
+- Source attribution
+- Search performance statistics
+
+Screenshots:
+
+![MedSearch IR Web Interface](docs/images/web_interface_0.png)
+
+![MedSearch IR Web Interface](docs/images/web_interface_1.png)
+
+![MedSearch IR Web Interface](docs/images/web_interface_2.png)
 
 ---
 

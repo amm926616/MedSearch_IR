@@ -249,7 +249,7 @@ MedSearch_IR
 Clone the repository:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/amm926616/MedSearch_IR.git
 
 cd MedSearch_IR
 ```

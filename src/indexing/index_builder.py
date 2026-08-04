@@ -9,6 +9,7 @@ import json
 from pathlib import Path
 
 from .inverted_index import InvertedIndex
+from .metadata import build_metadata, save_metadata
 
 
 INPUT_FILE = Path(
@@ -68,33 +69,67 @@ def save_index(index):
 def run():
 
     print("=" * 50)
-    print("Building Inverted Index")
+    print("Building Search Index")
     print("=" * 50)
 
 
     documents = load_documents()
 
+
+    # Build inverted index
+
     index = build_index(
         documents
     )
+
 
     save_index(
         index
     )
 
 
+    # Build document metadata
+
+    metadata = build_metadata(
+        documents
+    )
+
+
+    save_metadata(
+        metadata
+    )
+
+
+    print()
+
     print(
         f"Documents indexed: {len(documents)}"
     )
+
 
     print(
         f"Unique terms: {len(index.index)}"
     )
 
+
     print(
-        f"Saved: {OUTPUT_FILE}"
+        f"Metadata documents: {len(metadata)}"
     )
 
+
+    print()
+
+    print(
+        "Saved:"
+    )
+
+    print(
+        f"- {OUTPUT_FILE}"
+    )
+
+    print(
+        "- dataset/processed/document_metadata.json"
+    )
 
 
 if __name__ == "__main__":

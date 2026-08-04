@@ -40,7 +40,23 @@ def build_metadata(documents):
         tokens = document["tokens"]
 
         metadata[doc_id] = {
-            "length": len(tokens)
+
+            "length": len(tokens),
+
+            "title": document.get(
+                "title",
+                ""
+            ),
+
+            "source": document.get(
+                "source",
+                ""
+            ),
+
+            "url": document.get(
+                "url",
+                ""
+            )
         }
 
 

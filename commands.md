@@ -1,7 +1,17 @@
-```bash
-python -m src.collection.dataset_loader
-```
+# MedSearch IR Pipeline
+
+## Complete Build
+
+Run the following commands in order:
 
 ```bash
-python -m src.preprocessing.pipeline
+python scripts/crawl.py
+
+python scripts/load_dataset.py
+
+python scripts/preprocess.py
+
+python scripts/build_index.py
+
+python main.py
 ```

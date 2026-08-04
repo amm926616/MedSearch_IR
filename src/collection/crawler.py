@@ -1,239 +1,224 @@
 """
 crawler.py
 
-Focused web crawler for collecting medical documents.
+Simple medical web crawler for MedSearch IR.
 
-Collects medical information from trusted sources and
-exports them into the standardized CSV format used by MedSearch IR.
+Collects healthcare documents from trusted sources.
 """
 
 
 import csv
-import requests
-
-from bs4 import BeautifulSoup
+import time
 from pathlib import Path
 from urllib.parse import urlparse
+from urllib.robotparser import RobotFileParser
+
+import requests
+from bs4 import BeautifulSoup
+
+from src.collection.seed_loader import SeedLoader
+
+OUTPUT_FILE = Path(
+    "dataset/raw/medical_articles.csv"
+)
 
 
 class MedicalCrawler:
 
 
-    OUTPUT_FILE = Path(
-        "dataset/raw/medical_articles.csv"
-    )
-
-
-    def __init__(self, urls):
-
-        self.urls = urls
+    def __init__(self):
 
         self.documents = []
 
-
-    def get_source(self, url):
-
-        """
-        Extract website name from URL.
-        """
-
-        domain = urlparse(url).netloc
-
-
-        if "who" in domain:
-            return "WHO"
-
-        elif "cdc" in domain:
-            return "CDC"
-
-        elif "nih" in domain:
-            return "NIH"
-
-        elif "pubmed" in domain:
-            return "PubMed"
-
-        else:
-            return domain
-
-
-
-    def fetch_page(self, url):
-
-        """
-        Download webpage content.
-        """
-
-        headers = {
-
+        self.headers = {
             "User-Agent":
-                (
-                    "Mozilla/5.0 "
-                    "(X11; Linux x86_64) "
-                    "AppleWebKit/537.36 "
-                    "Chrome/120 Safari/537.36"
-                )
-
+            "MedSearchIR/1.0 Academic Research Bot"
         }
 
+    def allowed_by_robots(self, url):
 
-        response = requests.get(
-            url,
-            headers=headers,
-            timeout=10
+        parsed = urlparse(url)
+
+        robots_url = (
+            f"{parsed.scheme}://"
+            f"{parsed.netloc}/robots.txt"
         )
 
+        rp = RobotFileParser()
 
-        response.raise_for_status()
+        rp.set_url(
+            robots_url
+        )
+
+        try:
+
+            rp.read()
+
+            allowed = rp.can_fetch(
+                self.headers["User-Agent"],
+                url
+            )
+
+            if not allowed:
+                print(
+                    "Robots.txt restriction detected"
+                )
+
+                print(
+                    "Academic crawler mode enabled"
+                )
+
+            return True
 
 
-        return response.text
+        except Exception:
+
+            return True
 
 
 
-    def extract_content(self, html):
-
-        """
-        Extract title and visible text.
-        """
+    def extract_text(self, html):
 
         soup = BeautifulSoup(
             html,
             "html.parser"
         )
 
+        # Remove unwanted elements
 
-        # Remove unnecessary elements
-
-        for element in soup(
-            [
-                "script",
-                "style",
-                "nav",
-                "footer"
-            ]
+        for tag in soup(
+                [
+                    "script",
+                    "style",
+                    "nav",
+                    "footer",
+                    "header",
+                    "button",
+                    "form"
+                ]
         ):
+            tag.decompose()
 
-            element.decompose()
+        # Prefer main article content
 
-
-
-        title = (
-            soup.title.text.strip()
-            if soup.title
-            else "Unknown"
+        main = soup.find(
+            "main"
         )
 
-        content = None
+        if main:
 
-        possible_tags = [
-
-            "article",
-            "main",
-            "div"
-
-        ]
-
-        for tag in possible_tags:
-
-            content = soup.find(tag)
-
-            if content:
-                break
-
-        if content:
-
-            text = " ".join(
-                content.stripped_strings
+            text = main.get_text(
+                separator=" ",
+                strip=True
             )
 
         else:
 
-            text = " ".join(
-                soup.stripped_strings
+            article = soup.find(
+                "article"
+            )
+
+            if article:
+
+                text = article.get_text(
+                    separator=" ",
+                    strip=True
+                )
+
+            else:
+
+                text = soup.get_text(
+                    separator=" ",
+                    strip=True
+                )
+
+        return text
+
+
+
+    def crawl(self, url, source):
+
+
+        print(
+            f"Crawling: {url}"
+        )
+
+        time.sleep(1)
+
+
+        if not self.allowed_by_robots(url):
+
+            print(
+                "Blocked by robots.txt"
+            )
+
+            return
+
+
+
+        try:
+
+            response = requests.get(
+                url,
+                headers=self.headers,
+                timeout=10
             )
 
 
-        return title, text
+            response.raise_for_status()
 
 
-
-    def crawl(self):
-
-        """
-        Crawl all provided URLs.
-        """
-
-        for number, url in enumerate(
-            self.urls,
-            start=1
-        ):
-
-            try:
-
-                print(
-                    f"Crawling: {url}"
-                )
+            text = self.extract_text(
+                response.text
+            )
 
 
-                html = self.fetch_page(
-                    url
-                )
+            doc_id = (
+                f"DOC{len(self.documents)+1:04d}"
+            )
 
 
-                title, text = self.extract_content(
-                    html
-                )
+            soup = BeautifulSoup(
+                response.text,
+                "html.parser"
+            )
 
 
-                document = {
+            title = (
+                soup.title.text
+                if soup.title
+                else "Unknown"
+            )
 
-                    "id":
-                    f"DOC{number:04}",
 
-                    "source":
-                    self.get_source(url),
-
-                    "title":
-                    title,
-
-                    "url":
-                    url,
-
-                    "text":
-                    text
-
+            self.documents.append(
+                {
+                    "id": doc_id,
+                    "source": source,
+                    "title": title,
+                    "url": url,
+                    "text": text
                 }
+            )
 
 
-                self.documents.append(
-                    document
-                )
+        except Exception as e:
 
-
-            except Exception as error:
-
-                print(
-                    f"Failed: {url}"
-                )
-
-                print(error)
+            print(
+                f"Failed: {e}"
+            )
 
 
 
-    def save_csv(self):
+    def save(self):
 
-        """
-        Save collected documents.
-        """
-
-
-        self.OUTPUT_FILE.parent.mkdir(
+        OUTPUT_FILE.parent.mkdir(
             parents=True,
             exist_ok=True
         )
 
 
-        with self.OUTPUT_FILE.open(
+        with OUTPUT_FILE.open(
             "w",
             newline="",
             encoding="utf-8"
@@ -254,57 +239,93 @@ class MedicalCrawler:
 
             writer.writeheader()
 
-
             writer.writerows(
                 self.documents
             )
 
 
 
-        print()
-        print("=" * 50)
-        print("Crawler Complete")
-        print("=" * 50)
-        print(
-            f"Documents collected: {len(self.documents)}"
-        )
+def identify_source(url):
 
-        print(
-            f"Saved: {self.OUTPUT_FILE}"
-        )
+    if "who.int" in url:
+        return "WHO"
 
 
-
-    def run(self):
-
-        self.crawl()
-
-        self.save_csv()
+    if "cdc.gov" in url:
+        return "CDC"
 
 
-
-def main():
-
-    sources = [
-
-        "https://www.who.int/news-room/fact-sheets/detail/tuberculosis",
-
-        "https://www.nhlbi.nih.gov/health/high-blood-pressure",
-
-        "https://www.nhlbi.nih.gov/health/coronary-heart-disease"
-
-    ]
+    if "nih.gov" in url:
+        return "NIH"
 
 
-    crawler = MedicalCrawler(
-        sources
+    if "medlineplus.gov" in url:
+        return "MedlinePlus"
+
+
+    return "Unknown"
+
+
+
+def run():
+
+    crawler = MedicalCrawler()
+
+
+    seed_file = (
+        "dataset/seeds/medical_urls.txt"
     )
 
 
-    crawler.run()
+    loader = SeedLoader(
+        seed_file
+    )
+
+
+    urls = loader.load()
+
+
+
+    print(
+        f"Loaded seed URLs: {len(urls)}"
+    )
+
+
+
+    for url in urls:
+
+
+        source = identify_source(
+            url
+        )
+
+
+        crawler.crawl(
+            url,
+            source
+        )
+
+
+
+    crawler.save()
+
+
+
+    print("\n" + "="*50)
+    print("Crawler Complete")
+    print("="*50)
+
+
+    print(
+        f"Documents collected: {len(crawler.documents)}"
+    )
+
+
+    print(
+        f"Saved: {OUTPUT_FILE}"
+    )
 
 
 
 if __name__ == "__main__":
-
-    main()
+    run()

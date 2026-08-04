@@ -1,4 +1,11 @@
 query,precision,recall,f1,MAP,nDCG
-blood pressure,1.0,1.0,1.0,1.0,1.0
-diabetes,1.0,1.0,1.0,1.0,1.0
-influenza,1.0,1.0,1.0,1.0,1.0
+symptoms of diabetes,0.6,1.0,0.7499999999999999,0.9166666666666666,0.9674679834891693
+causes and prevention of heart disease,0.8,1.0,0.888888888888889,1.0,1.0
+cancer risk factors,0.6,1.0,0.7499999999999999,1.0,1.0
+malaria symptoms and treatment,0.2,1.0,0.33333333333333337,1.0,1.0
+high blood pressure causes,0.4,1.0,0.5714285714285715,1.0,1.0
+asthma symptoms and management,0.4,1.0,0.5714285714285715,1.0,1.0
+mental health depression anxiety,0.6,1.0,0.7499999999999999,0.8666666666666667,0.9469024295259745
+stroke symptoms,0.2,1.0,0.33333333333333337,1.0,1.0
+obesity health risks,0.6,1.0,0.7499999999999999,1.0,1.0
+infectious diseases,0.4,0.4,0.4000000000000001,0.3333333333333333,0.5087403079104241

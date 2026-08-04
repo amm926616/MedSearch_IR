@@ -1,17 +1,290 @@
 {
     "DOC0001": {
-        "length": 17
+        "length": 385,
+        "title": "Diabetes",
+        "source": "WHO",
+        "url": "https://www.who.int/health-topics/diabetes"
     },
     "DOC0002": {
-        "length": 20
+        "length": 490,
+        "title": "Cardiovascular diseases",
+        "source": "WHO",
+        "url": "https://www.who.int/health-topics/cardiovascular-diseases"
     },
     "DOC0003": {
-        "length": 18
+        "length": 488,
+        "title": "Cancer",
+        "source": "WHO",
+        "url": "https://www.who.int/health-topics/cancer"
     },
     "DOC0004": {
-        "length": 15
+        "length": 399,
+        "title": "Malaria",
+        "source": "WHO",
+        "url": "https://www.who.int/health-topics/malaria"
     },
     "DOC0005": {
-        "length": 14
+        "length": 290,
+        "title": "Diabetes | CDC",
+        "source": "CDC",
+        "url": "https://www.cdc.gov/diabetes/"
+    },
+    "DOC0006": {
+        "length": 140,
+        "title": "Heart Disease | CDC",
+        "source": "CDC",
+        "url": "https://www.cdc.gov/heart-disease/"
+    },
+    "DOC0007": {
+        "length": 129,
+        "title": "Cancer | CDC",
+        "source": "CDC",
+        "url": "https://www.cdc.gov/cancer/"
+    },
+    "DOC0008": {
+        "length": 538,
+        "title": "High Blood Pressure - What Is High Blood Pressure? | NHLBI, NIH",
+        "source": "NIH",
+        "url": "https://www.nhlbi.nih.gov/health/high-blood-pressure"
+    },
+    "DOC0009": {
+        "length": 553,
+        "title": "Coronary Heart Disease - What Is Coronary Heart Disease? | NHLBI, NIH",
+        "source": "NIH",
+        "url": "https://www.nhlbi.nih.gov/health/coronary-heart-disease"
+    },
+    "DOC0010": {
+        "length": 258,
+        "title": "Asthma - What Is Asthma? | NHLBI, NIH",
+        "source": "NIH",
+        "url": "https://www.nhlbi.nih.gov/health/asthma"
+    },
+    "DOC0011": {
+        "length": 1664,
+        "title": "Diabetes | Type 1 Diabetes | Type 2 Diabetes | MedlinePlus",
+        "source": "MedlinePlus",
+        "url": "https://medlineplus.gov/diabetes.html"
+    },
+    "DOC0012": {
+        "length": 1339,
+        "title": "High Blood Pressure | Hypertension | MedlinePlus",
+        "source": "MedlinePlus",
+        "url": "https://medlineplus.gov/highbloodpressure.html"
+    },
+    "DOC0013": {
+        "length": 1488,
+        "title": "Heart Disease | MedlinePlus",
+        "source": "MedlinePlus",
+        "url": "https://medlineplus.gov/heartdiseases.html"
+    },
+    "DOC0014": {
+        "length": 1741,
+        "title": "Cancer: MedlinePlus",
+        "source": "MedlinePlus",
+        "url": "https://medlineplus.gov/cancer.html"
+    },
+    "DOC0015": {
+        "length": 1694,
+        "title": "Asthma | Asthma Symptoms | Asthma Attack | MedlinePlus",
+        "source": "MedlinePlus",
+        "url": "https://medlineplus.gov/asthma.html"
+    },
+    "DOC0016": {
+        "length": 1568,
+        "title": "Stroke | CVA | Cerebrovascular Accident | MedlinePlus",
+        "source": "MedlinePlus",
+        "url": "https://medlineplus.gov/stroke.html"
+    },
+    "DOC0017": {
+        "length": 807,
+        "title": "Mental Health: MedlinePlus",
+        "source": "MedlinePlus",
+        "url": "https://medlineplus.gov/mentalhealth.html"
+    },
+    "DOC0018": {
+        "length": 1622,
+        "title": "Depression: MedlinePlus",
+        "source": "MedlinePlus",
+        "url": "https://medlineplus.gov/depression.html"
+    },
+    "DOC0019": {
+        "length": 1198,
+        "title": "Anxiety: MedlinePlus",
+        "source": "MedlinePlus",
+        "url": "https://medlineplus.gov/anxiety.html"
+    },
+    "DOC0020": {
+        "length": 1333,
+        "title": "Alzheimer's Disease | AD | MedlinePlus",
+        "source": "MedlinePlus",
+        "url": "https://medlineplus.gov/alzheimersdisease.html"
+    },
+    "DOC0021": {
+        "length": 928,
+        "title": "Arthritis | MedlinePlus",
+        "source": "MedlinePlus",
+        "url": "https://medlineplus.gov/arthritis.html"
+    },
+    "DOC0022": {
+        "length": 1199,
+        "title": "Obesity: MedlinePlus",
+        "source": "MedlinePlus",
+        "url": "https://medlineplus.gov/obesity.html"
+    },
+    "DOC0023": {
+        "length": 1340,
+        "title": "Kidney Diseases | Renal Disease | MedlinePlus",
+        "source": "MedlinePlus",
+        "url": "https://medlineplus.gov/kidneydiseases.html"
+    },
+    "DOC0024": {
+        "length": 731,
+        "title": "Infectious Disease | Germs | MedlinePlus",
+        "source": "MedlinePlus",
+        "url": "https://medlineplus.gov/infectiousdiseases.html"
+    },
+    "DOC0025": {
+        "length": 1493,
+        "title": "Tuberculosis | TB | MedlinePlus",
+        "source": "MedlinePlus",
+        "url": "https://medlineplus.gov/tuberculosis.html"
+    },
+    "DOC0026": {
+        "length": 59,
+        "title": "Asthma | Asthma | CDC",
+        "source": "CDC",
+        "url": "https://www.cdc.gov/asthma/"
+    },
+    "DOC0027": {
+        "length": 163,
+        "title": "Arthritis | Arthritis | CDC",
+        "source": "CDC",
+        "url": "https://www.cdc.gov/arthritis/"
+    },
+    "DOC0028": {
+        "length": 56,
+        "title": "Stroke | CDC",
+        "source": "CDC",
+        "url": "https://www.cdc.gov/stroke/"
+    },
+    "DOC0029": {
+        "length": 154,
+        "title": "Mental Health | CDC",
+        "source": "CDC",
+        "url": "https://www.cdc.gov/mental-health/"
+    },
+    "DOC0030": {
+        "length": 181,
+        "title": "Obesity | Obesity | CDC",
+        "source": "CDC",
+        "url": "https://www.cdc.gov/obesity/"
+    },
+    "DOC0031": {
+        "length": 216,
+        "title": "Chronic Kidney Disease | CDC",
+        "source": "CDC",
+        "url": "https://www.cdc.gov/kidney-disease/"
+    },
+    "DOC0032": {
+        "length": 309,
+        "title": "Tuberculosis (TB) | Tuberculosis (TB) | CDC",
+        "source": "CDC",
+        "url": "https://www.cdc.gov/tb/"
+    },
+    "DOC0033": {
+        "length": 193,
+        "title": "Malaria | CDC",
+        "source": "CDC",
+        "url": "https://www.cdc.gov/malaria/"
+    },
+    "DOC0034": {
+        "length": 125,
+        "title": "HIV | CDC",
+        "source": "CDC",
+        "url": "https://www.cdc.gov/hiv/"
+    },
+    "DOC0035": {
+        "length": 603,
+        "title": "COPD - What Is COPD? | NHLBI, NIH",
+        "source": "NIH",
+        "url": "https://www.nhlbi.nih.gov/health/copd"
+    },
+    "DOC0036": {
+        "length": 350,
+        "title": "Sleep Apnea - What Is Sleep Apnea? | NHLBI, NIH",
+        "source": "NIH",
+        "url": "https://www.nhlbi.nih.gov/health/sleep-apnea"
+    },
+    "DOC0037": {
+        "length": 315,
+        "title": "Anemia - What Is Anemia? | NHLBI, NIH",
+        "source": "NIH",
+        "url": "https://www.nhlbi.nih.gov/health/anemia"
+    },
+    "DOC0038": {
+        "length": 267,
+        "title": "Heart Attack - What Is a Heart Attack? | NHLBI, NIH",
+        "source": "NIH",
+        "url": "https://www.nhlbi.nih.gov/health/heart-attack"
+    },
+    "DOC0039": {
+        "length": 229,
+        "title": "Arrhythmias - What Is an Arrhythmia? | NHLBI, NIH",
+        "source": "NIH",
+        "url": "https://www.nhlbi.nih.gov/health/arrhythmias"
+    },
+    "DOC0040": {
+        "length": 482,
+        "title": "Mental health",
+        "source": "WHO",
+        "url": "https://www.who.int/health-topics/mental-health"
+    },
+    "DOC0041": {
+        "length": 470,
+        "title": "Obesity",
+        "source": "WHO",
+        "url": "https://www.who.int/health-topics/obesity"
+    },
+    "DOC0042": {
+        "length": 410,
+        "title": "Ageing",
+        "source": "WHO",
+        "url": "https://www.who.int/health-topics/ageing"
+    },
+    "DOC0043": {
+        "length": 487,
+        "title": "Vaccines and immunization",
+        "source": "WHO",
+        "url": "https://www.who.int/health-topics/vaccines-and-immunization"
+    },
+    "DOC0044": {
+        "length": 7,
+        "title": "Health topics",
+        "source": "WHO",
+        "url": "https://www.who.int/health-topics/infectious-diseases"
+    },
+    "DOC0045": {
+        "length": 703,
+        "title": "HIV - Global",
+        "source": "WHO",
+        "url": "https://www.who.int/health-topics/hiv-aids"
+    },
+    "DOC0046": {
+        "length": 213,
+        "title": "Antimicrobial resistance",
+        "source": "WHO",
+        "url": "https://www.who.int/health-topics/antimicrobial-resistance"
+    },
+    "DOC0047": {
+        "length": 513,
+        "title": "Healthy diet",
+        "source": "WHO",
+        "url": "https://www.who.int/health-topics/healthy-diet"
+    },
+    "DOC0048": {
+        "length": 562,
+        "title": "Physical activity",
+        "source": "WHO",
+        "url": "https://www.who.int/health-topics/physical-activity"
     }
 }

@@ -44,6 +44,8 @@ def run():
 
             "url": document["url"],
 
+            "text": document["text"],
+
             "tokens": normalize(
                 document["text"]
             )

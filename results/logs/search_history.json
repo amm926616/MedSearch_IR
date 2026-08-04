@@ -1,0 +1,267 @@
+[
+    {
+        "query": "tuberculosis",
+        "timestamp": "2026-08-04 17:01:59",
+        "results": [
+            "DOC0001"
+        ]
+    },
+    {
+        "query": "quantum physics",
+        "timestamp": "2026-08-04 17:02:12",
+        "results": [
+            "DOC0002"
+        ]
+    },
+    {
+        "query": "clear",
+        "timestamp": "2026-08-04 17:03:05",
+        "results": []
+    },
+    {
+        "query": "quantum physics",
+        "timestamp": "2026-08-04 17:06:42",
+        "results": [
+            "DOC0002"
+        ]
+    },
+    {
+        "query": "",
+        "timestamp": "2026-08-04 17:08:27",
+        "results": []
+    },
+    {
+        "query": "quantum physics",
+        "timestamp": "2026-08-04 17:08:36",
+        "results": [
+            "DOC0002"
+        ]
+    },
+    {
+        "query": "quantum physics",
+        "timestamp": "2026-08-04 17:10:03",
+        "results": []
+    },
+    {
+        "query": "blood pressure",
+        "timestamp": "2026-08-04 17:20:25",
+        "results": [
+            "DOC0002",
+            "DOC0003",
+            "DOC0001"
+        ]
+    },
+    {
+        "query": "quantum mechanifs",
+        "timestamp": "2026-08-04 17:20:35",
+        "results": []
+    },
+    {
+        "query": "quantum mechanics",
+        "timestamp": "2026-08-04 17:20:40",
+        "results": []
+    },
+    {
+        "query": "stardew valley",
+        "timestamp": "2026-08-04 17:35:09",
+        "results": []
+    },
+    {
+        "query": "heart",
+        "timestamp": "2026-08-04 17:35:12",
+        "results": [
+            "DOC0006",
+            "DOC0009",
+            "DOC0008",
+            "DOC0002",
+            "DOC0001"
+        ]
+    },
+    {
+        "query": "disease",
+        "timestamp": "2026-08-04 17:35:17",
+        "results": [
+            "DOC0006",
+            "DOC0009",
+            "DOC0002",
+            "DOC0001",
+            "DOC0004"
+        ]
+    },
+    {
+        "query": "cancer",
+        "timestamp": "2026-08-04 18:48:43",
+        "results": [
+            "DOC0007",
+            "DOC0003",
+            "DOC0001",
+            "DOC0002"
+        ]
+    },
+    {
+        "query": "diabetes",
+        "timestamp": "2026-08-04 18:48:46",
+        "results": [
+            "DOC0005",
+            "DOC0001",
+            "DOC0002"
+        ]
+    },
+    {
+        "query": "stress",
+        "timestamp": "2026-08-04 18:48:49",
+        "results": [
+            "DOC0008"
+        ]
+    },
+    {
+        "query": "heart",
+        "timestamp": "2026-08-04 18:48:56",
+        "results": [
+            "DOC0006",
+            "DOC0009",
+            "DOC0008",
+            "DOC0002",
+            "DOC0001"
+        ]
+    },
+    {
+        "query": "python main.py",
+        "timestamp": "2026-08-04 19:03:11",
+        "results": []
+    },
+    {
+        "query": "start",
+        "timestamp": "2026-08-04 19:03:30",
+        "results": [
+            "DOC0010",
+            "DOC0001",
+            "DOC0003"
+        ]
+    },
+    {
+        "query": "what",
+        "timestamp": "2026-08-04 19:03:32",
+        "results": [
+            "DOC0010",
+            "DOC0008",
+            "DOC0009",
+            "DOC0007",
+            "DOC0006"
+        ]
+    },
+    {
+        "query": "engine",
+        "timestamp": "2026-08-04 19:03:34",
+        "results": []
+    },
+    {
+        "query": "sure",
+        "timestamp": "2026-08-04 19:03:36",
+        "results": [
+            "DOC0005"
+        ]
+    },
+    {
+        "query": "like",
+        "timestamp": "2026-08-04 19:03:38",
+        "results": [
+            "DOC0009",
+            "DOC0006",
+            "DOC0003",
+            "DOC0008",
+            "DOC0001"
+        ]
+    },
+    {
+        "query": "start",
+        "timestamp": "2026-08-04 19:03:39",
+        "results": [
+            "DOC0010",
+            "DOC0001",
+            "DOC0003"
+        ]
+    },
+    {
+        "query": "diabetes",
+        "timestamp": "2026-08-04 19:04:15",
+        "results": [
+            "DOC0005",
+            "DOC0001",
+            "DOC0002"
+        ]
+    },
+    {
+        "query": "diabetes",
+        "timestamp": "2026-08-04 19:17:13",
+        "results": [
+            "DOC0005",
+            "DOC0001",
+            "DOC0002"
+        ]
+    },
+    {
+        "query": "\u001b1rm dataset/raw/medical_articles.csv",
+        "timestamp": "2026-08-04 19:18:33",
+        "results": []
+    },
+    {
+        "query": "rm dataset/processed/*.json",
+        "timestamp": "2026-08-04 19:18:33",
+        "results": []
+    },
+    {
+        "query": "diabetes",
+        "timestamp": "2026-08-04 19:20:37",
+        "results": [
+            "DOC0001",
+            "DOC0005"
+        ]
+    },
+    {
+        "query": "star",
+        "timestamp": "2026-08-04 19:45:44",
+        "results": []
+    },
+    {
+        "query": "what",
+        "timestamp": "2026-08-04 19:45:46",
+        "results": [
+            "DOC0017",
+            "DOC0020",
+            "DOC0010",
+            "DOC0015",
+            "DOC0013"
+        ]
+    },
+    {
+        "query": "disease",
+        "timestamp": "2026-08-04 19:45:49",
+        "results": [
+            "DOC0013",
+            "DOC0009",
+            "DOC0023",
+            "DOC0025",
+            "DOC0006"
+        ]
+    },
+    {
+        "query": "heart disease",
+        "timestamp": "2026-08-04 19:45:52",
+        "results": [
+            "DOC0013",
+            "DOC0009",
+            "DOC0006",
+            "DOC0002",
+            "DOC0038"
+        ]
+    },
+    {
+        "query": "clear",
+        "timestamp": "2026-08-04 19:52:20",
+        "results": [
+            "DOC0035",
+            "DOC0018"
+        ]
+    }
+]

@@ -8,7 +8,6 @@ BM25 ranking implementation.
 import math
 
 
-
 class BM25Ranker:
 
 
@@ -28,6 +27,10 @@ class BM25Ranker:
         self.b = 0.75
 
 
+        self.score_threshold = 0.1
+        self.coverage_threshold = 0.5
+
+
         self.avg_doc_length = (
             sum(
                 doc["length"]
@@ -42,7 +45,6 @@ class BM25Ranker:
     def idf(self, term):
 
         if term not in self.index:
-
             return 0
 
 
@@ -64,9 +66,15 @@ class BM25Ranker:
 
 
 
-    def rank(self, query_tokens):
+    def rank(
+        self,
+        query_tokens,
+        top_k=5
+    ):
 
         scores = {}
+
+        matched_terms = {}
 
 
         for term in query_tokens:
@@ -80,6 +88,7 @@ class BM25Ranker:
 
 
             for doc_id, frequency in self.index[term].items():
+
 
                 doc_length = (
                     self.metadata[doc_id]["length"]
@@ -125,8 +134,44 @@ class BM25Ranker:
                 )
 
 
+                matched_terms[doc_id] = (
+                    matched_terms.get(doc_id, 0)
+                    +
+                    1
+                )
+
+
+
+        filtered_results = []
+
+
+        for doc_id, score in scores.items():
+
+
+            coverage = (
+                matched_terms[doc_id]
+                /
+                len(query_tokens)
+            )
+
+
+            if (
+                coverage >= self.coverage_threshold
+                and
+                score >= self.score_threshold
+            ):
+
+                filtered_results.append(
+                    (
+                        doc_id,
+                        score
+                    )
+                )
+
+
+
         return sorted(
-            scores.items(),
+            filtered_results,
             key=lambda x: x[1],
             reverse=True
-        )
+        )[:top_k]

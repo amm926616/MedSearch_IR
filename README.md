@@ -737,11 +737,21 @@ Screenshots:
 
 ---
 
-# Authors
+## Authors
 
-MedSearch IR Project Team
+**MedSearch IR Project Team**
 
-Information Retrieval Course
+This project was developed as part of the **Information Retrieval (CS 3308)** course at the **University of the People**.
+
+The system demonstrates the complete lifecycle of a domain-specific information retrieval application, including medical document collection, preprocessing, indexing, ranking, evaluation, and web-based search deployment.
+
+### Contributors
+
+- **Aung Myint Myat**  
+  System architecture design, TF-IDF and BM25 ranking engines, Django/HTMX web search interface, evaluation analysis, and project integration.
+
+- **Kaung Khant Kyaw**  
+  Medical document crawler, seed dataset development, preprocessing pipeline, inverted index implementation, and evaluation dataset preparation.
 
 ---
 

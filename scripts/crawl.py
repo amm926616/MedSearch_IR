@@ -20,4 +20,4 @@ from src.collection.crawler import run
 
 if __name__ == "__main__":
 
-    run()
+    run(delay_time=1.5)

@@ -25,10 +25,11 @@ OUTPUT_FILE = Path(
 
 class MedicalCrawler:
 
-
-    def __init__(self):
+    def __init__(self, delay_time=1.5):
 
         self.documents = []
+
+        self.delay = delay_time
 
         self.headers = {
             "User-Agent":
@@ -138,20 +139,16 @@ class MedicalCrawler:
 
     def crawl(self, url, source):
 
-
         print(
             f"Crawling: {url}"
         )
 
         if not self.allowed_by_robots(url):
-
             print(
                 "Blocked by robots.txt"
             )
 
             return
-
-
 
         try:
 
@@ -161,32 +158,26 @@ class MedicalCrawler:
                 timeout=10
             )
 
-
             response.raise_for_status()
-
 
             text = self.extract_text(
                 response.text
             )
 
-
             doc_id = (
-                f"DOC{len(self.documents)+1:04d}"
+                f"DOC{len(self.documents) + 1:04d}"
             )
-
 
             soup = BeautifulSoup(
                 response.text,
                 "html.parser"
             )
 
-
             title = (
                 soup.title.text
                 if soup.title
                 else "Unknown"
             )
-
 
             self.documents.append(
                 {
@@ -205,6 +196,13 @@ class MedicalCrawler:
                 f"Failed: {e}"
             )
 
+
+        finally:
+
+            # Polite crawling delay
+            time.sleep(
+                self.delay
+            )
 
 
     def save(self):
@@ -264,9 +262,9 @@ def identify_source(url):
 
 
 
-def run():
+def run(delay_time=1.5):
 
-    crawler = MedicalCrawler()
+    crawler = MedicalCrawler(delay_time)
 
 
     seed_file = (
@@ -287,25 +285,17 @@ def run():
         f"Loaded seed URLs: {len(urls)}"
     )
 
-
-
     for url in urls:
-
-
         source = identify_source(
             url
         )
-
 
         crawler.crawl(
             url,
             source
         )
 
-
-
     crawler.save()
-
 
 
     print("\n" + "="*50)

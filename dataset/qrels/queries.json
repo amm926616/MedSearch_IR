@@ -1,12 +1,12 @@
 {
-    "Q001": "symptoms of diabetes",
-    "Q002": "causes and prevention of heart disease",
-    "Q003": "cancer risk factors",
-    "Q004": "malaria symptoms and treatment",
-    "Q005": "high blood pressure causes",
-    "Q006": "asthma symptoms and management",
-    "Q007": "mental health depression anxiety",
-    "Q008": "stroke symptoms",
-    "Q009": "obesity health risks",
-    "Q010": "infectious diseases"
+    "Q001": "blood pressure",
+    "Q002": "diabetes",
+    "Q003": "tuberculosis",
+    "Q004": "influenza",
+    "Q005": "kidney disease",
+    "Q006": "heart disease",
+    "Q007": "asthma",
+    "Q008": "depression anxiety",
+    "Q009": "stroke",
+    "Q010": "infectious disease"
 }

@@ -1,3 +1,7 @@
+"""
+views.py
+"""
+
 import sys
 import time
 from pathlib import Path
@@ -6,7 +10,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from django.template.loader import render_to_string
 
-# 1. Add project root (MedSearch_IR) to sys.path so we can import `src`
+# Adding project root (MedSearch_IR) to sys.path so we can import `src`
 BASE_DIR = Path(__file__).resolve().parent.parent  # web/
 PROJECT_ROOT = BASE_DIR.parent                     # MedSearch_IR/
 

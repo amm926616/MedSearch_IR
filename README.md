@@ -755,8 +755,10 @@ The system demonstrates the complete lifecycle of a domain-specific information 
 
 ---
 
-# License
+## License
 
-Academic project for educational purposes.
+This project is licensed under the MIT License.
+
+Developed as an academic project for educational purposes as part of the **Information Retrieval (CS 3308)** course at the **University of the People**.
 
 ---

@@ -53,44 +53,12 @@ The main objectives of MedSearch IR are:
 
 MedSearch IR follows a modular Information Retrieval pipeline.
 
-```
+![MedSearch IR Web Interface](docs/diagrams/system_architecture.png)
 
-Medical Sources  
-|  
-v  
-Seed URL Collection  
-|  
-v  
-Crawler  
-|  
-v  
-Medical Dataset  
-|  
-v  
-Text Preprocessing  
-|  
-v  
-Inverted Index  
-|  
-v  
-Query Processing  
-|  
-v  
-BM25 Ranking  
-|  
-v  
-Search Results  
-|  
-v  
-Evaluation
 
 ```
 
-Detailed architecture diagram:
-
-```
-
-docs/diagrams/system_architecture.md
+docs/diagrams/system_architecture.png
 
 ```
 
@@ -116,13 +84,16 @@ Current sources include:
 - Centers for Disease Control and Prevention (CDC)
 - National Institutes of Health (NIH)
 - National Heart, Lung, and Blood Institute (NHLBI)
+- National Institute of Mental Health (NIMH)
+- National Institute of Neurological Disorders and Stroke (NINDS)
+- National Institute of Diabetes and Digestive and Kidney Diseases (NIDDK)
 - MedlinePlus
 
 Current collection:
 
 ```
 
-48 medical documents
+70 medical documents
 
 ```
 

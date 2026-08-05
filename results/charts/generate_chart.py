@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 # File paths relative to project root
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 CSV_FILE = PROJECT_ROOT / "results" / "evaluation_results.csv"
-OUTPUT_IMAGE = PROJECT_ROOT / "results" / "charts" / "chart.png"
+OUTPUT_IMAGE = PROJECT_ROOT / "results" / "charts" / "metric_evaluation_chart.png"
 
 def generate_benchmark_chart():
     if not CSV_FILE.exists():

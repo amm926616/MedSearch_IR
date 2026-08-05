@@ -757,5 +757,159 @@
             "DOC0013",
             "DOC0062"
         ]
+    },
+    {
+        "query": "covid-19",
+        "timestamp": "2026-08-04 17:38:54",
+        "results": [
+            "DOC0027",
+            "DOC0026",
+            "DOC0008",
+            "DOC0007",
+            "DOC0010"
+        ]
+    },
+    {
+        "query": "hypertension",
+        "timestamp": "2026-08-05 01:44:36",
+        "results": [
+            "DOC0052",
+            "DOC0032",
+            "DOC0002",
+            "DOC0013",
+            "DOC0062"
+        ]
+    },
+    {
+        "query": "l",
+        "timestamp": "2026-08-05 01:45:49",
+        "results": [
+            "DOC0029",
+            "DOC0063"
+        ]
+    },
+    {
+        "query": "liver",
+        "timestamp": "2026-08-05 01:45:50",
+        "results": [
+            "DOC0050",
+            "DOC0028",
+            "DOC0047",
+            "DOC0046",
+            "DOC0006"
+        ]
+    },
+    {
+        "query": "h",
+        "timestamp": "2026-08-05 01:46:09",
+        "results": [
+            "DOC0026",
+            "DOC0054"
+        ]
+    },
+    {
+        "query": "hep",
+        "timestamp": "2026-08-05 01:46:10",
+        "results": []
+    },
+    {
+        "query": "heptitis",
+        "timestamp": "2026-08-05 01:46:11",
+        "results": []
+    },
+    {
+        "query": "H",
+        "timestamp": "2026-08-05 01:46:15",
+        "results": [
+            "DOC0026",
+            "DOC0054"
+        ]
+    },
+    {
+        "query": "HVB",
+        "timestamp": "2026-08-05 01:46:23",
+        "results": []
+    },
+    {
+        "query": "H",
+        "timestamp": "2026-08-05 01:46:24",
+        "results": [
+            "DOC0026",
+            "DOC0054"
+        ]
+    },
+    {
+        "query": "HIV",
+        "timestamp": "2026-08-05 01:46:25",
+        "results": [
+            "DOC0010",
+            "DOC0025",
+            "DOC0065",
+            "DOC0031",
+            "DOC0028"
+        ]
+    },
+    {
+        "query": "H",
+        "timestamp": "2026-08-05 01:46:40",
+        "results": [
+            "DOC0026",
+            "DOC0054"
+        ]
+    },
+    {
+        "query": "Hepatitis B",
+        "timestamp": "2026-08-05 01:46:43",
+        "results": [
+            "DOC0028",
+            "DOC0050",
+            "DOC0008",
+            "DOC0003",
+            "DOC0010"
+        ]
+    },
+    {
+        "query": "covid-19",
+        "timestamp": "2026-08-05 04:28:14",
+        "results": [
+            "DOC0027",
+            "DOC0026",
+            "DOC0008",
+            "DOC0007",
+            "DOC0010"
+        ]
+    },
+    {
+        "query": "hypertension",
+        "timestamp": "2026-08-05 04:28:17",
+        "results": [
+            "DOC0052",
+            "DOC0032",
+            "DOC0002",
+            "DOC0013",
+            "DOC0062"
+        ]
+    },
+    {
+        "query": "cancer",
+        "timestamp": "2026-08-05 04:28:19",
+        "results": [
+            "DOC0054",
+            "DOC0003",
+            "DOC0016",
+            "DOC0008",
+            "DOC0013"
+        ]
+    },
+    {
+        "query": "diabetes",
+        "timestamp": "2026-08-05 04:28:21",
+        "results": [
+            "DOC0051",
+            "DOC0001",
+            "DOC0014",
+            "DOC0063",
+            "DOC0069"
+        ]
     }
 ]
